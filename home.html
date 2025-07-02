@@ -1,10 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-  </head>
-  <body>
-    <h1>Welcome to homepage</h1>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="home.html" class="brand">MySite</a>
+    <button class="nav-toggle" id="nav-toggle">
+      ☰
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1>Welcome to homepage</h1>
+
+  <script src="script.js"></script>
+</body>
 </html>

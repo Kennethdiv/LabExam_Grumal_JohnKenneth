@@ -118,3 +118,80 @@ form .link-text a {
 .label-color {
   color: #9eb3b5;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #333;
+  padding: 0.5rem 1rem;
+}
+
+.navbar .brand {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.navbar .nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-menu li {
+  margin-left: 1rem;
+}
+
+.navbar .nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: background 0.3s;
+}
+
+.navbar .nav-menu a:hover,
+.navbar .nav-menu a.active {
+  background: #555;
+  border-radius: 4px;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+  .nav-menu li {
+    margin: 0;
+  }
+  .nav-menu a {
+    padding: 1rem;
+    border-top: 1px solid #444;
+  }
+}
