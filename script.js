@@ -4,37 +4,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const password = document.getElementById("password");
 
   form.addEventListener("submit", (e) => {
+    e.preventDefault(); // stop default form submission
+
     const emailVal = email.value.trim();
     const passVal = password.value.trim();
 
-    if (emailVal === "") {
+    // Check email
+    if (!emailVal) {
       alert("Email is required");
       email.focus();
-      e.preventDefault();
       return;
     }
-
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(emailVal)) {
       alert("Invalid email format");
       email.focus();
-      e.preventDefault();
       return;
     }
 
-    if (passVal === "") {
+    // Check password
+    if (!passVal) {
       alert("Password is required");
       password.focus();
-      e.preventDefault();
       return;
     }
-
     if (passVal.length < 6) {
       alert("Password must be at least 6 characters");
       password.focus();
-      e.preventDefault();
       return;
     }
 
+    window.location.href = "home.html";
   });
 });
